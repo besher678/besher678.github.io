@@ -1,0 +1,225 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", monospace;
+  background-color: black;
+}
+
+.page {
+  background-color: black;
+  margin: 0 auto;
+}
+
+.page .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page .name .beshera {
+  font-size: 5rem;
+  color: white;
+  margin-bottom: 6 0px;
+}
+
+.page .layout {
+  display: grid;
+  grid-template-areas:
+    "a a a a b b b c c c"
+    "a a a a d d d d d d"
+    " . . . . . . . . . .";
+  height: 80vh;
+  gap: 10px;
+}
+
+.page .layout .service {
+  grid-area: a;
+  background-color: #2900e8;
+  color: white;
+}
+
+.page .layout .work {
+  grid-area: b;
+  background-color: #ffffff;
+}
+
+.page .layout .about {
+  grid-area: c;
+  background-color: #1b1b1f;
+  color: white;
+}
+
+.page .layout .contact {
+  grid-area: d;
+  background-color: #fff480;
+}
+
+.page .layout .container {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page .layout div {
+  display: flex;
+  align-items: end;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.page .layout .square {
+  transition: 0.2s ease-in-out;
+}
+
+.page .layout .square:hover {
+  box-shadow: 0 14px 28px hsla(0, 0%, 100%, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+
+.page .layout p {
+  font-size: 1.59rem;
+  font-weight: lighter;
+}
+
+.page .layout .img img {
+  width: 25px;
+  height: 25px;
+}
+
+.page .second {
+  height: 100vh;
+  background-color: white;
+  flex-direction: column;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter h3 {
+  color: black;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.booking-title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.booking .times {
+  height: 100vh;
+  background-color: #36454f;
+
+  display: grid;
+  grid-template-areas:
+    ". . . . . . . . . ."
+    ". a a a a . c c c ."
+    ". a a a a . c c c ."
+    ". a a a a . c c c ."
+    ". a a a a . c c c ."
+    ". a a a a . c c c ."
+    ". . . . . . . . . .";
+}
+
+.calander {
+  grid-area: a;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.content {
+  width: 550px;
+  height: 80px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.subscription {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.subscription .add-email {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.5rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.subscription .submit-email {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: calc(100% - 2px);
+  width: 150px;
+  border: none;
+  border-radius: 60px;
+  outline: none;
+  margin: 1px;
+  padding: 0 20px;
+  cursor: pointer;
+  background: #aa0000;
+  color: white;
+  transition: width 0.35s ease-in-out, background 0.35s ease-in-out;
+}
+
+.subscription.done .submit-email {
+  width: calc(100% - 2px);
+  background: #aa0000;
+}
+
+.subscription .submit-email .before-submit,
+.subscription .submit-email .after-submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 38px;
+  transition: visibility 0.35s ease-in-out, opacity 0.35s ease-in-out;
+}
+
+.subscription.done .submit-email .before-submit,
+.subscription:not(.done) .submit-email .after-submit {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.subscription .submit-email .after-submit {
+  transition-delay: 0.35s;
+}
+
+.subscription:not(.done) .submit-email .before-submit,
+.subscription.done .submit-email .after-submit {
+  visibility: visible;
+  opacity: 1;
+}
