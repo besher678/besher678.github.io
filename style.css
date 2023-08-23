@@ -1,0 +1,240 @@
+:root{
+    --white: #F8F8F8;
+    --gray: #757575;
+    --black: #282828;
+    --darkBlue: #222234;
+    --lessDarkBlue: #222256;
+    --yellow: #F9ED33;
+
+    --width: 80%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-container{
+    width: 100%;
+    max-width: var(--width);
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    background-color: var(--black);
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 16px 8px 0;
+}
+
+
+.navbar .logo{
+    color: var(--white);
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.menu{
+    max-width: var(--width);
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.menu a{
+    margin: 0 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--white);
+    transition: transform 250ms;
+}
+
+.menu a:hover{
+    transform: scale(1.2);
+    color: var(--gray);
+}
+
+.button{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--darkBlue);
+    color: var(--white);
+    padding: 8px 16px;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.button:hover{
+    cursor: pointer;
+    color: var(--gray);
+}
+
+
+.hire-me{
+    margin-top: 10px;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.hero-container{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--black);
+    color: var(--yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/blob.svg");
+    background-repeat: no-repeat;
+    background-size: 3000px;
+    background-position: 400px;
+}
+
+.landing-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.landing-header h1{
+    max-width: 900px;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+.landing-header p{
+    color: var(--white);
+    line-height: 1.5;
+    font-size: 1.2rem;
+    max-width: 750px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.about{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.column .left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    max-width: 800px;
+    height: 100%;
+}
+
+.column .right{
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left h2{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.left p{
+    font-size: 1.2rem;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+}
+
+.about-img{
+    height: 400px;
+}
+
+.portfolio-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--darkBlue);
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: var(--width);
+    height: 80%;
+}
+
+.project-img{
+}
+
+.project-img img{
+    height: 350px;
+    place-self: center;
+    border: 5px solid black;
+}
+
+.project-img:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+#dasddasddsaddasd
